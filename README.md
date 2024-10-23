@@ -1,6 +1,6 @@
 GlassFusion
 
-GlassFusion is a modern web application built with React and Vite, showcasing exquisite glass art creations. This project emphasizes fast performance and an intuitive user interface, allowing users to explore a diverse gallery, learn about glass art techniques, and shop for unique handcrafted pieces.
+GlassFusion is a modern web application built with React and Vite, showcasing glass fabrications of all kinds. This project emphasizes fast performance and an intuitive user interface, allowing users to explore a diverse gallery, learn about glass products.
 
 Features
 
