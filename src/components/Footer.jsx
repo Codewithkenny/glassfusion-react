@@ -25,8 +25,8 @@ const Footer = () => {
           {/* Company Address */}
           <div className="mb-4 md:mb-0 md:w-1/4">
             <h4 className="font-bold mb-2 text-primary">Contact Information</h4>
-            <p className="text-gray-700">123 Glass Street, Art City</p>
-            <p className="text-gray-700">Phone: (123) 456-7890</p>
+            <p className="text-gray-700">4 Ejike Onyenokporo , Ogudu Orí-òkè, Lagos.</p>
+            <p className="text-gray-700">Phone: (234) 815 757-4317</p>
           </div>
         </div>
 

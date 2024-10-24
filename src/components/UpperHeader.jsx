@@ -3,7 +3,7 @@ import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 const UpperHeader = () => {
   return (
-    <div className="bg-[#F3F4F7] text-[#13084B] py-2">
+    <div className="bg-[#D8DCE9] text-[#13084B] py-2">
       <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
         {/* Left section: Phone, Contact Us */}
         <div className="flex space-x-4">

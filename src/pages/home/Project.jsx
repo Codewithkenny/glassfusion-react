@@ -72,7 +72,7 @@ const Project = () => {
               {/* Project Details */}
               <div className="absolute bottom-4 left-4 text-white z-10">
                 <h1 className="text-2xl font-bold">{project.name}</h1>
-                <button className="mt-2 px-6 py-3 bg-secondary text-white font-semibold rounded-full hover:bg-primary transition-colors duration-100">
+                <button className="mt-2 px-6 py-3 bg-[#D8DCE9] text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-colors duration-100">
                   View More
                 </button>
               </div>
