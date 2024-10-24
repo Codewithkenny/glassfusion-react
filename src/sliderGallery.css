@@ -1,0 +1,27 @@
+
+/* Style for the slider arrows */
+.slick-prev, .slick-next {
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 50%; /* Round the buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slick-prev:hover, .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+  }
+  
+  /* Style for the dots */
+  .slick-dots li button:before {
+    font-size: 16px; /* Increase dot size */
+    color: #000; /* Change dot color */
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #13084B; /* Highlight the active dot in red */
+  }
+  

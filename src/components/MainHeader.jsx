@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'; // Import icons for the hamburger and close button
+// import logoImage from "../assets/gf-logo.png"
+
 
 const MainHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track menu visibility
@@ -26,17 +28,17 @@ const MainHeader = () => {
         {/* Navigation Links Container for Desktop */}
         <div className="hidden md:flex flex-1 justify-center">
           <nav className="flex space-x-12">
-            <a href="#home" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+            <a href="/" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
               Home
             </a>
-            <a href="#services" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
-              Services
+            <a href="/about" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+              About
             </a>
-            <a href="#projects" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+            <a href="/projects" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
               Projects
             </a>
-            <a href="#about" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
-              About Us
+            <a href="/contact" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+              Contact
             </a>
           </nav>
         </div>

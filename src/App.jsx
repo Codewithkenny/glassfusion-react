@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import UpperHeader from './components/UpperHeader';
 import MainHeader from './components/MainHeader';
+import Footer from './components/Footer';
 import './App.css';
 
 function App() {
@@ -19,9 +20,11 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white text-center py-4">
-        © 2024 Glass Fusion Company. All rights reserved.
-      </footer>
+      <Footer/>
+
+      {/* <footer className="bg-gray-800 text-white text-center py-4">
+        © 2024 Glass Fusion Company. All rights reserved. Designed and Developed by 8701DevOps
+      </footer> */}
     </>
   );
 }

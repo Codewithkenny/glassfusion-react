@@ -3,7 +3,9 @@ import App from "../App";
 import Home from "../pages/home/Home";
 import About from "../pages/home/About"; 
 import Contact from "../pages/home/Contact";
-// import Contact from "../pages/contact/Contact"; // Assuming you have a Contact page
+import Project from "../pages/home/Project";
+import ProjectDetails from '../pages/home/ProjectDetails';
+import Gallery from '../components/sliderGallery'; 
 
 const router = createBrowserRouter([
   {
@@ -12,7 +14,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home /> // Home will render Hero
+        element: <Home />
       },
       {
         path: "/about",
@@ -21,9 +23,19 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact/>
-      }
-     
-      
+      },
+      {
+        path: "/projects",
+        element: <Project/>
+      },
+      {
+        path: "/projects/:id",
+        element: <ProjectDetails />,
+      },
+      {
+        path: "/gallery/:productName", // Ensure this route matches your implementation
+        element: <Gallery />,
+      },
     ]
   },
 ]);
