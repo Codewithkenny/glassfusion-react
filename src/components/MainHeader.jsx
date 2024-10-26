@@ -8,6 +8,7 @@ const MainHeader = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen); // Toggle the mobile menu open/close state
+    setIsDropdownOpen(false); // Close dropdown when toggling mobile menu
   };
 
   const toggleDropdown = () => {
@@ -19,7 +20,7 @@ const MainHeader = () => {
   };
 
   return (
-    <div className="bg-white text-[#13084B] py-4 shadow-md relative"> {/* Set position to relative */}
+    <div className="bg-white text-[#13084B] py-4 shadow-md relative"> 
       <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <div className="text-2xl font-bold">
@@ -48,7 +49,7 @@ const MainHeader = () => {
                 Glass Types
               </button>
               {isDropdownOpen && (
-                <div className="absolute left-0 bg-primary text-white shadow-lg mt-2 rounded z-50 w-48"> {/* Increased width */}
+                <div className="absolute left-0 bg-primary text-white shadow-lg mt-2 rounded z-50 w-48">
                   <ul className="flex flex-col space-y-2 p-4 border-b border-white">
                     <li>
                       <Link to="/glass-types/balustrades" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); }}>
@@ -124,11 +125,76 @@ const MainHeader = () => {
             <Link to="/" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
               Home
             </Link>
-            <Link to="/about" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
-              About
-            </Link>
+            {/* Glass Types Dropdown in Mobile Menu */}
+            <div className="relative">
+              <button
+                onClick={toggleDropdown}
+                className="text-sm font-semibold hover:text-blue-600 transition duration-200"
+              >
+                Glass Types
+              </button>
+              {isDropdownOpen && (
+                <div className="bg-primary text-white shadow-lg mt-2 rounded z-50 w-48">
+                  <ul className="flex flex-col space-y-2 p-4 border-b border-gray-300">
+                    <li>
+                      <Link to="/glass-types/balustrades" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); toggleMenu(); }}>
+                        Balustrades
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/laminated" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); toggleMenu(); }}>
+                        Laminated Glass
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/tempered" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); toggleMenu(); }}>
+                        Tempered Glass
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/frosted" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); toggleMenu(); }}>
+                        Frosted Glass
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/insulated" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); toggleMenu(); }}>
+                        Insulated Glass
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/laminated-safety" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); toggleMenu(); }}>
+                        Laminated Safety Glass
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/colored" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); toggleMenu(); }}>
+                        Colored Glass
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/reflective" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); toggleMenu(); }}>
+                        Reflective Glass
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/tempered-safety" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); toggleMenu(); }}>
+                        Tempered Safety Glass
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/clear" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); toggleMenu(); }}>
+                        Clear Glass
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
             <Link to="/projects" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
               Projects
+            </Link>
+            <Link to="/about" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+              About
             </Link>
             <Link to="/contact" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
               Contact

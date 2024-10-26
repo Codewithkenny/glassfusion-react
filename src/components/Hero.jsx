@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import heroImage from '../assets/newglassbalustrade.webp'; 
+import heroImage from '../assets/newglassbalustrade.webp';
 
 const Hero = () => {
   return (
-    <div className="relative h-[450px]  bg-cover bg-center" style={{ backgroundImage: `url(${heroImage})` }}>
+    <div
+      className="relative w-full  h-[450px] bg-cover  bg-no-repeat bg-center" style={{ backgroundImage: `url(${heroImage})` }}>
       <div className="absolute inset-0 bg-gradient-to-r from-[#13084B] to-transparent opacity-50"></div>
       <div className="absolute inset-0 flex flex-col justify-center items-start p-8 md:p-16">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
