@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../assets/gf-logo.png'; // Replace with your logo image path
+import Divider from './Divider';
 
 const Footer = () => {
   return (
@@ -31,7 +32,7 @@ const Footer = () => {
         </div>
 
         {/* Divider */}
-        <div className="w-1/2 mx-auto border-t border-gray-300 my-4"></div>
+       <Divider/>
 
         {/* Copyright Section */}
         <div className="text-center mt-4">

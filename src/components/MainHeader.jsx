@@ -1,21 +1,29 @@
 import React, { useState } from 'react';
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'; // Import icons for the hamburger and close button
-// import logoImage from "../assets/gf-logo.png"
-
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const MainHeader = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track menu visibility
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to track mobile menu visibility
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State to track dropdown visibility
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggle the menu open/close state
+    setIsMenuOpen(!isMenuOpen); // Toggle the mobile menu open/close state
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen); // Toggle the dropdown visibility
+  };
+
+  const closeDropdown = () => {
+    setIsDropdownOpen(false); // Close the dropdown
   };
 
   return (
-    <div className="bg-white text-[#13084B] py-4 shadow-md">
+    <div className="bg-white text-[#13084B] py-4 shadow-md relative"> {/* Set position to relative */}
       <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <div className="text-2xl font-bold">
-          <a href="/">Glass Fusion</a>
+          <Link to="/">Glass Fusion</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -28,18 +36,83 @@ const MainHeader = () => {
         {/* Navigation Links Container for Desktop */}
         <div className="hidden md:flex flex-1 justify-center">
           <nav className="flex space-x-12">
-            <a href="/" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+            <Link to="/" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
               Home
-            </a>
-            <a href="/about" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
-              About
-            </a>
-            <a href="/projects" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+            </Link>
+            {/* Glass Types Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleDropdown}
+                className="text-sm font-semibold hover:text-blue-600 transition duration-200"
+              >
+                Glass Types
+              </button>
+              {isDropdownOpen && (
+                <div className="absolute left-0 bg-primary text-white shadow-lg mt-2 rounded z-50 w-48"> {/* Increased width */}
+                  <ul className="flex flex-col space-y-2 p-4 border-b border-white">
+                    <li>
+                      <Link to="/glass-types/balustrades" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); }}>
+                        Balustrades
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/laminated" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); }}>
+                        Laminated Glass
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/tempered" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); }}>
+                        Tempered Glass
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/frosted" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); }}>
+                        Frosted Glass
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/insulated" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); }}>
+                        Insulated Glass
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/laminated-safety" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); }}>
+                        Laminated Safety Glass
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/colored" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); }}>
+                        Colored Glass
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/reflective" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); }}>
+                        Reflective Glass
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/tempered-safety" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); }}>
+                        Tempered Safety Glass
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/glass-types/clear" className="block p-2 hover:bg-blue-600" onClick={() => { closeDropdown(); }}>
+                        Clear Glass
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
+            <Link to="/projects" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
               Projects
-            </a>
-            <a href="/contact" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+            </Link>
+            <Link to="/about" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+              About
+            </Link>
+            <Link to="/contact" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
               Contact
-            </a>
+            </Link>
           </nav>
         </div>
       </div>
@@ -48,18 +121,18 @@ const MainHeader = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg mt-5">
           <nav className="flex flex-col space-y-4 py-4 px-4">
-            <a href="#home" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+            <Link to="/" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
               Home
-            </a>
-            <a href="#services" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
-              Services
-            </a>
-            <a href="#projects" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+            </Link>
+            <Link to="/about" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+              About
+            </Link>
+            <Link to="/projects" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
               Projects
-            </a>
-            <a href="#about" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
-              About Us
-            </a>
+            </Link>
+            <Link to="/contact" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+              Contact
+            </Link>
           </nav>
         </div>
       )}

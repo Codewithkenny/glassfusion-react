@@ -1,57 +1,53 @@
 import React from 'react';
-import bgImage1 from '../assets/facade.jpg'; 
-import bgImage2 from '../assets/mirrors.jpg'; 
-import bgImage3 from '../assets/glass.jpg';
+import { Link } from 'react-router-dom';
+import bgImage1 from '../assets/mirrors.jpg'; 
+import bgImage2 from '../assets/glass.jpg';   
+import bgImage3 from '../assets/facade.jpg';  
 
 const CTASection = () => {
   return (
-    <div className=" mx-auto py-16 bg-primary w-full h-full">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4">
-        {/* Column 1 */}
+    <div className="container mx-auto py-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Column 1 - Get a Quote */}
         <div
-          className="relative h-64 bg-cover bg-center flex flex-col justify-between"
+          className="relative h-64 bg-cover bg-center flex flex-col items-center justify-end"
           style={{ backgroundImage: `url(${bgImage1})` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="relative p-4">
-            <h2 className="text-white text-2xl font-bold mb-4">Get a Quote</h2>
-          </div>
-          <div className="relative p-4 mb-4">
-            <button className="bg-primary text-white px-6 py-2 rounded-full transition-colors duration-300 hover:bg-transparent hover:text-white border border-white block mx-auto">
-              Get Quote
-            </button>
+          <div className="relative text-center p-4 mb-4">
+            <Link to="/contact">
+              <button className="bg-primary text-white px-4 py-2 rounded-full transition-colors duration-300 hover:bg-transparent hover:text-white border border-white">
+                Get Quote
+              </button>
+            </Link>
           </div>
         </div>
 
-        {/* Column 2 */}
+        {/* Column 2 - Find a Branch */}
         <div
-          className="relative h-64 bg-cover bg-center flex flex-col justify-between"
+          className="relative h-64 bg-cover bg-center flex flex-col items-center justify-end"
           style={{ backgroundImage: `url(${bgImage2})` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="relative p-4">
-            <h2 className="text-white text-2xl font-bold mb-4">Find a Branch</h2>
-          </div>
-          <div className="relative p-4 mb-4">
-            <button className="bg-primary text-white px-6 py-2 rounded-full transition-colors duration-300 hover:bg-transparent hover:text-white border border-white block mx-auto">
-              Find a Branch
+          <div className="relative text-center p-4 mb-4">
+            <button className="bg-primary text-white px-4 py-2 rounded-full transition-colors duration-300 hover:bg-transparent hover:text-white border border-white">
+              Find Branch
             </button>
           </div>
         </div>
 
-        {/* Column 3 */}
+        {/* Column 3 - Contact Us */}
         <div
-          className="relative h-64 bg-cover bg-center flex flex-col justify-between"
+          className="relative h-64 bg-cover bg-center flex flex-col items-center justify-end"
           style={{ backgroundImage: `url(${bgImage3})` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="relative p-4">
-            <h2 className="text-white text-2xl font-bold mb-4">Contact Us</h2>
-          </div>
-          <div className="relative p-4 mb-4">
-            <button className="bg-primary text-white px-6 py-2 rounded-full transition-colors duration-300 hover:bg-transparent hover:text-white border border-white block mx-auto">
-              Contact Us
-            </button>
+          <div className="relative text-center p-4 mb-4">
+            <Link to="/contact">
+              <button className="bg-primary text-white px-4 py-2 rounded-full transition-colors duration-300 hover:bg-transparent hover:text-white border border-white">
+                Contact Us
+              </button>
+            </Link>
           </div>
         </div>
       </div>

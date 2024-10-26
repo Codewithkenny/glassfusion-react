@@ -8,15 +8,15 @@ const CompanyVideo = () => {
   const imageUrl = "../assets/video-img.jpg"; 
 
   return (
-    <div className="container mx-auto py-16 flex flex-col md:flex-row md:gap-5">
+    <div className="container mx-auto py-16 flex flex-col md:flex-row md:gap-5 p-4">
       {/* Text Section */}
       <div className="md:w-1/2 md:pr-8 bg-slate-100 py-2 px-3 p-6">
-        <h1 className="text-4xl font-bold mb-4 text-primary">Glass Fusion journey</h1>
-        <p className="text-lg mb-4">
-          <span className='font-semibold'>Click the image to play the video</span> <br /><br /> Here you can add a description of the video, explaining its content and purpose. This text can provide context and encourage users to click the play button.
+        <h1 className="text-4xl font-bold py-4 mb-4 text-primary">Glass Fusion journey</h1>
+        <p className="text-base mb-4">
+          <span className='font-semibold'>Click the image to play the video</span> <br /><br /> This video showcases the journey of using glass in innovative design and fabrication processes to create a variety of architectural products, including shower glass, facades, and balustrades. Explore how skilled artisans transform glass into functional yet stunning pieces that enhance modern spaces, from sleek shower enclosures to impressive building facades and elegant balustrades.
         </p>
-        <p className="text-lg mb-4">
-          Add any additional information you think is relevant to your audience or details about what they will see in the video.
+        <p className="text-base mb-4">
+        Through this video, gain insights into the meticulous techniques and craftsmanship required to shape and install glass products that meet both aesthetic and structural needs. Perfect for architects, designers, and anyone interested in the art and science behind glass fabrication!
         </p>
       </div>
 
