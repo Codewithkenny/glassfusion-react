@@ -9,9 +9,9 @@ const GlassTypePage = () => {
     balustrades: {
       title: 'Balustrades',
       description: 'Balustrades are protective barriers or railings used in various architectural designs.',
-      image: '../assets/balustrades.jpg',
+      image: '../assets/gallery/balustrades.jpg',
       thumbnails: [
-        '../assets/balustrade-thumbnail1.jpg',
+        '../assets/balustrade-thumbnail1.jpeg',
         '../assets/balustrade-thumbnail2.jpg',
         // Add more thumbnails as needed
       ],
