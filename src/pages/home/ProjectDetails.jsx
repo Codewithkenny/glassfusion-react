@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import image1 from "../../assets/showerglass.jpg";
-import image2 from "../../assets/glassbalustrade.jpg";
+import image2 from "../../assets/gallery/balustrade-thumbnail1.jpeg";
 import image3 from "../../assets/glasspartition.jpg";
 import image4 from "../../assets/mirrors.jpg";
 import image5 from "../../assets/facade.jpg";
@@ -82,7 +82,7 @@ const ProjectDetail = () => {
       <img 
         src={project.image} 
         alt={project.name} 
-        className="w-full h-[400px] object-cover mb-4" 
+        className="w-full h-[500px] object-cover mb-4" 
       />
       <p className="text-lg mb-4">{project.overview}</p>
       {/* View Gallery Button */}

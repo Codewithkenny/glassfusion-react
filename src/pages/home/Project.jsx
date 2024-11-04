@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import image1 from "../../assets/showerglass.jpg";
-import image2 from "../../assets/glassbalustrade.jpg";
+import image2 from "../../assets/gallery/balustrade-thumbnail1.jpeg";
 import image3 from "../../assets/glasspartition.jpg";
 import image4 from "../../assets/mirrors.jpg";
 import image5 from "../../assets/facade.jpg";
