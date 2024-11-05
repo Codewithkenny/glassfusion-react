@@ -4,7 +4,7 @@ import Divider from './Divider';
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-primary py-8">
+    <footer className="bg-gray-100 text-primary py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between">
           {/* Logo Section */}

@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css'; 
 import 'slick-carousel/slick/slick-theme.css';
 import Breadcrumb from '../components/BreadCrumb'; 
-import image1 from '../assets/gallery/balustrade-thumbnail1.jpg';
+import image1 from '../assets/gallery/balustrade-thumbnail1.jpeg';
 import image2 from '../assets/facade.jpg';
 import image3 from '../assets/glass.jpg';
 import image4 from '../assets/mirrors.jpg';
