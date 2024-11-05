@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import showerGlassImage from '../../assets/showerglass.jpg'; 
+import showerGlassImage from '../../assets/gallery/showerglass.jpg'; 
 import Divider from "../../components/Divider"
 
 

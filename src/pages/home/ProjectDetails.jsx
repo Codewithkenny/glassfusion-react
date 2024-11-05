@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import image1 from "../../assets/showerglass.jpg";
+import image1 from "../../assets/gallery/showerglass.jpg";
 import image2 from "../../assets/gallery/balustrade-thumbnail1.jpeg";
 import image3 from "../../assets/glasspartition.jpg";
 import image4 from "../../assets/mirrors.jpg";
