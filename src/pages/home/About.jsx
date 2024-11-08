@@ -21,7 +21,7 @@ const About = () => {
       </section>
 
       {/* Breadcrumbs - Placed after the Hero Section */}
-      <nav className="bg-gray-100 py-3 px-4 md:px-8">
+      <nav className="bg-gray-200 py-3 px-4 md:px-8">
         <ul className="flex items-center text-sm text-gray-600 space-x-2">
           <li>
             <Link to="/" className="hover:text-blue-600">Home</Link>
@@ -67,7 +67,7 @@ const About = () => {
       <Divider/>
 
       {/* New Two-Column Section with Image and Text */}
-      <section className="py-12 px-4 md:px-8">
+      <section className="py-12 px-4 md:px-8 bg-gray-100">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Column: Text Content */}
           <div>

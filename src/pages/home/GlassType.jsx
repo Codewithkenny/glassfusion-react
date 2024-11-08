@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-
-// Import only necessary images for each glass type
 import balustradesImage from '../../assets/gallery/balustrade-thumbnail1.jpeg';
 import balustradeThumbnail1 from '../../assets/newglassbalustrade.jpg';
 import balustradeThumbnail2 from '../../assets/balustrade.jpg';
 import showerGlassImage from '../../assets/gallery/showerglass.jpg';
 import showerGlassThumbnail1 from '../../assets/showerglass-thumbnail1.jpg';
 import showerGlassThumbnail2 from '../../assets/showerglass-thumbnail2.jpg';
+import temperedGlassImage from '../../assets/gallery/temperedglass.jpg';
+import temperedGlassThumbnail1 from '../../assets/temperedglassthumbnail1.jpg';
+import temperedGlassThumbnail2 from '../../assets/temperedglassthumbnail2.jpg';
+import glassPartitionImage from '../../assets/gallery/partition.jpg';
+import partitionThumbnail1 from '../../assets/partitionthumbnail1.jpg';
+import partitionThumbnail2 from '../../assets/partitionthumbnail2.jpg';
 
-
-const GlassTypePage = () => {
+const GlassType = () => {
   const { type } = useParams();
+  console.log("Glass Type:", type);
   const [selectedThumbnail, setSelectedThumbnail] = useState(null);
 
   // Define glass types with only two images each
@@ -22,11 +26,23 @@ const GlassTypePage = () => {
       image: balustradesImage,
       thumbnails: [balustradeThumbnail1, balustradeThumbnail2],
     },
-    showers: {
+    'shower-glass': {
       title: 'Shower Glass',
       description: 'Shower glass is made by sandwiching a layer of polyvinyl butyral (PVB) between two pieces of glass.',
       image: showerGlassImage,
       thumbnails: [showerGlassThumbnail1, showerGlassThumbnail2],
+    },
+    'tempered-glass': {
+      title: 'Tempered Glass',
+      description: 'Tempered glass is made by sandwiching a layer of polyvinyl butyral (PVB) between two pieces of glass.',
+      image: temperedGlassImage,
+      thumbnails: [temperedGlassThumbnail1, temperedGlassThumbnail2],
+    },
+    'glass-partition': {
+      title: 'Glass Partition',
+      description: 'Tempered glass is made by sandwiching a layer of polyvinyl butyral (PVB) between two pieces of glass.',
+      image: glassPartitionImage,
+      thumbnails: [partitionThumbnail1, partitionThumbnail2],
     },
     // Add more glass types if needed
   };
@@ -93,4 +109,4 @@ const GlassTypePage = () => {
   );
 };
 
-export default GlassTypePage;
+export default GlassType;

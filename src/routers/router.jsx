@@ -19,27 +19,35 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <About/>
+        element: <About />
       },
       {
         path: "/contact",
-        element: <ContactUs/>
+        element: <ContactUs />
       },
       {
         path: "/projects",
-        element: <Project/>
+        element: <Project />
       },
       {
         path: "/projects/:id",
         element: <ProjectDetails />,
       },
+      // {
+      //   path: "/glass-types/balustrades",
+      //   element: <GlassType type="balustrades" />,
+      // },
+      // {
+      //   path: "/glass-types/showers",
+      //   element: <GlassType type="showers" />,
+      // },
       {
         path: "/glass-types/:type",
-        element: <GlassType />, // Component to render for each glass type
+        element: <GlassType />
       },
-    
+      
       {
-        path: "/gallery/:productName", // Ensure this route matches your implementation
+        path: "/gallery/:productName", 
         element: <Gallery />,
       },
     ]
