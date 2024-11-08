@@ -43,8 +43,17 @@ const Project = () => {
                   alt={project.name}
                   className="w-full h-64 object-cover transition-opacity duration-300 opacity-80 hover:opacity-100"
                 />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                {/* Diagonal Gradient Overlay */}
+                <div
+                  className="absolute inset-0 opacity-60"
+                  style={{
+                    backgroundImage: `linear-gradient(
+                      135deg,
+                      rgba(19, 8, 75, 0.7) 35%,
+                      transparent 25%
+                    )`,
+                  }}
+                ></div>
 
                 {/* Project Details */}
                 <div className="absolute bottom-4 left-4 text-white z-10">

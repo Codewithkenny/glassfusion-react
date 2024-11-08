@@ -5,8 +5,22 @@ import heroImage from '../assets/hero-section.jpeg';
 const Hero = () => {
   return (
     <div
-      className="relative w-full  h-[500px] bg-cover  bg-no-repeat bg-center" style={{ backgroundImage: `url(${heroImage})` }}>
-      <div className="absolute inset-0 bg-gradient-to-r from-[#13084B] to-transparent opacity-50"></div>
+      className="relative w-full h-[500px] bg-cover bg-no-repeat bg-center"
+      style={{ backgroundImage: `url(${heroImage})` }}
+    >
+      {/* Single Stripe Gradient Overlay */}
+      <div
+        className="absolute inset-0 opacity-60"
+        style={{
+          backgroundImage: `linear-gradient(
+            300deg,
+            rgba(19, 8, 75, 0.7) 50%,
+            transparent 50%
+          )`,
+        }}
+      ></div>
+
+      {/* Content Section */}
       <div className="absolute inset-0 flex flex-col justify-center items-start p-8 md:p-16">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
           Welcome to Glass Fusion

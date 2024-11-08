@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const UpperHeader = () => {
@@ -9,10 +9,15 @@ const UpperHeader = () => {
         {/* Left section: Phone, Contact Us */}
         <div className="flex space-x-4">
           <span>📞 +234 815 757 4317</span>
-          <a href="mailto:info@glassfusion.ng" className="hover:underline">
+          <a
+            href="mailto:info@glassfusion.ng"
+            className="relative text-primary group"
+          >
             Contact Us
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </a>
         </div>
+
         
         {/* Right section: Social Links and Get Quote Button */}
         <div className="flex items-center space-x-4">
@@ -22,9 +27,12 @@ const UpperHeader = () => {
           <a href="https://www.instagram.com/glass.fusion" target="_blank" rel="noopener noreferrer" className="hover:text-pink-600">
             <FaInstagram />
           </a>
+          <a href="https://www.youtube.com/@GLASSFUSION" target="_blank" rel="noopener noreferrer" className="hover:text-pink-600">
+            <FaYoutube />
+          </a>
           <Link to="/contact">
-          <button className="bg-[#13084B] text-white px-4 py-1 rounded-full hover:bg-opacity-90 transition">
-            Get Quote
+          <button className="bg-primary text-white px-4 py-1 rounded-full transition-colors duration-300 hover:bg-transparent hover:text-white border border-white">
+            Get a quote
           </button>
           </Link>
         </div>
