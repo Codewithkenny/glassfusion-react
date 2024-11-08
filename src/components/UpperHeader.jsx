@@ -7,8 +7,8 @@ const UpperHeader = () => {
     <div className="bg-[#D8DCE9] text-[#13084B] py-2">
       <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8">
         {/* Left section: Phone, Contact Us */}
-        <div className="flex space-x-4">
-          <span>📞 +234 815 757 4317</span>
+        <div className="flex space-x-4 flex-wrap sm:space-x-6">
+          <span className="block sm:inline">📞 +234 815 757 4317</span>
           <a
             href="mailto:info@glassfusion.ng"
             className="relative text-primary group"
@@ -18,9 +18,8 @@ const UpperHeader = () => {
           </a>
         </div>
 
-        
         {/* Right section: Social Links and Get Quote Button */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 flex-wrap sm:space-x-6 justify-end mt-2 sm:mt-0">
           <a href="https://www.facebook.com/glassfusionafrica" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
             <FaFacebookF />
           </a>
@@ -31,9 +30,9 @@ const UpperHeader = () => {
             <FaYoutube />
           </a>
           <Link to="/contact">
-          <button className="bg-primary text-white px-4 py-1 rounded-full transition-colors duration-300 hover:bg-transparent hover:text-white border border-white">
-            Get a quote
-          </button>
+            <button className="bg-primary text-white px-4 py-1 rounded-full transition-colors duration-300 hover:bg-transparent hover:text-white border border-white mt-2 sm:mt-0">
+              Get a quote
+            </button>
           </Link>
         </div>
       </div>
