@@ -9,11 +9,9 @@ const About = () => {
     <div>
       {/* Hero Section - Positioned directly below the navbar */}
       <section
-        className="hero-section bg-cover bg-center h-96 flex items-center justify-center text-center text-white"
-        style={{ backgroundImage: `url('/path/to/your/about-hero-image.jpg')` }}
-      >
+        className="hero-section bg-cover bg-center h-96 flex items-center justify-center text-center text-white" >
         <div className="bg-primary p-8 w-full flex flex-col items-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Glass Fusion</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
           <p className="text-lg md:text-xl max-w-2xl">
             Pioneering innovation in glass fabrication, bringing excellence to every project.
           </p>
