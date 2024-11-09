@@ -30,14 +30,14 @@ const Hero = () => {
         </p>
         
         {/* Buttons */}
-        <div className="space-x-4 md:space-x-4 flex md:flex-row flex-col w-full md:w-auto max-w-[90%] md:max-w-none">
+        <div className="space-y-3 md:space-x-4 md:space-y-0 flex md:flex-row flex-col w-full md:w-auto max-w-[90%] md:max-w-none">
           <Link to="/about">
-            <button className="px-8 py-3 text-lg md:text-base rounded-full border border-primary bg-primary text-white font-semibold shadow-md transition-all duration-300 hover:bg-transparent hover:text-primary w-full md:w-auto mb-3 md:mb-0">
+            <button className="w-full md:w-auto px-8 py-3 text-sm md:text-base rounded-full border border-primary bg-primary text-white font-semibold shadow-md transition-all duration-300 hover:bg-transparent hover:text-primary">
               Learn More
             </button>
           </Link>
           <Link to="/contact">
-            <button className="px-8 py-3 text-lg md:text-base rounded-full border border-primary text-primary font-semibold shadow-md transition-all duration-300 hover:bg-primary hover:text-white w-full md:w-auto">
+            <button className="w-full md:w-auto px-8 py-3 text-sm md:text-base rounded-full border border-primary text-primary font-semibold shadow-md transition-all duration-300 hover:bg-primary hover:text-white">
               Contact Us
             </button>
           </Link>
