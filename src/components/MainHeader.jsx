@@ -53,7 +53,7 @@ const MainHeader = () => {
               {isDropdownOpen && (
                 <div className="absolute left-0 bg-primary text-white shadow-lg mt-2 rounded z-50 w-48">
                   <ul className="flex flex-col space-y-2 p-4 border-b border-white">
-                    {['Balustrades', 'Shower Glass', 'Tempered Glass', 'Glass Par', 'Insulated Glass', 'Laminated Safety Glass', 'Colored Glass', 'Reflective Glass', 'Tempered Safety Glass', 'Clear Glass'].map((type, index) => (
+                    {['Balustrades', 'Shower Glass', 'Tempered Glass', 'Glass Partition', 'Insulated Glass', 'Laminated Safety Glass', 'Colored Glass', 'Reflective Glass', 'Tempered Safety Glass', 'Clear Glass'].map((type, index) => (
                       <li key={index}>
                         <Link
                           to={`/glass-types/${type.toLowerCase().replace(/ /g, '-')}`}
@@ -85,7 +85,7 @@ const MainHeader = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg mt-5">
           <nav className="flex flex-col space-y-4 py-4 px-4">
-            <Link to="/" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+            <Link to="/" className="text-sm font-semibold hover:text-blue-600 transition duration-200" onClick={toggleMenu}>
               Home
             </Link>
             {/* Glass Types Dropdown in Mobile Menu */}
@@ -116,13 +116,13 @@ const MainHeader = () => {
                 </div>
               )}
             </div>
-            <Link to="/projects" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+            <Link to="/projects" className="text-sm font-semibold hover:text-blue-600 transition duration-200" onClick={toggleMenu}>
               Projects
             </Link>
-            <Link to="/about" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+            <Link to="/about" className="text-sm font-semibold hover:text-blue-600 transition duration-200" onClick={toggleMenu}>
               About
             </Link>
-            <Link to="/contact" className="text-sm font-semibold hover:text-blue-600 transition duration-200">
+            <Link to="/contact" className="text-sm font-semibold hover:text-blue-600 transition duration-200" onClick={toggleMenu}>
               Contact
             </Link>
           </nav>

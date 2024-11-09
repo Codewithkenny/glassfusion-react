@@ -15,21 +15,22 @@ const ContactUs = () => {
         <p className="mt-2">We'd love to hear from you! Reach out with any questions or inquiries.</p>
       </div>
 
+     {/* Breadcrumb */}
+     <nav className="bg-gray-200 py-3 px-4 md:px-8">
+        <ul className="flex items-center text-sm text-gray-600 space-x-2">
+          <li>
+            <Link to="/" className="hover:text-blue-600">Home</Link>
+          </li>
+          <li>/</li>
+          <li className="font-semibold text-primary">Contact</li>
+        </ul>
+      </nav>
+
+
       {/* Breadcrumb and Contact Content */}
       <div className="container mx-auto py-16 px-4 md:px-8 lg:px-12">
         
-        {/* Breadcrumb */}
-        <nav className="text-sm mb-4">
-          <ul className="flex items-center space-x-2 text-gray-600">
-            <li>
-              <Link to="/" className="hover:text-primary">Home</Link>
-            </li>
-            <li>/</li>
-            <li>
-              <Link to="/contact" className="font-semibold text-primary">Contact Us</Link>
-            </li>
-          </ul>
-        </nav>
+       
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           

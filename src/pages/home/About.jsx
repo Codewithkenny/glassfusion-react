@@ -25,7 +25,7 @@ const About = () => {
             <Link to="/" className="hover:text-blue-600">Home</Link>
           </li>
           <li>/</li>
-          <li>About</li>
+          <li className="font-semibold text-primary">About</li>
         </ul>
       </nav>
 
