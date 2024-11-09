@@ -8,18 +8,8 @@ const About = () => {
   return (
     <div>
       {/* Hero Section - Positioned directly below the navbar */}
-      <section
-        className="hero-section bg-cover bg-center h-96 flex items-center justify-center text-center text-white" >
-        <div className="bg-primary p-8 w-full flex flex-col items-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
-          <p className="text-lg md:text-xl max-w-2xl">
-            Pioneering innovation in glass fabrication, bringing excellence to every project.
-          </p>
-        </div>
-      </section>
-
-      {/* Breadcrumbs - Placed after the Hero Section */}
-      <nav className="bg-gray-200 py-3 px-4 md:px-8">
+        {/* Breadcrumbs - Placed after the Hero Section */}
+        <nav className="bg-gray-200 py-3 px-4 md:px-8">
         <ul className="flex items-center text-sm text-gray-600 space-x-2">
           <li>
             <Link to="/" className="hover:text-blue-600">Home</Link>
@@ -28,6 +18,18 @@ const About = () => {
           <li className="font-semibold text-primary">About</li>
         </ul>
       </nav>
+      
+      <section
+        className="hero-section bg-cover bg-center h-96 flex items-center justify-center text-center text-white" >
+        <div className="bg-primary p-8 w-full flex flex-col items-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Glass Fusion</h1>
+          <p className="text-lg md:text-xl max-w-2xl">
+            Pioneering innovation in glass fabrication, bringing excellence to every project.
+          </p>
+        </div>
+      </section>
+
+    
 
       {/* Original Two-Column Layout */}
       <section className="two-column-section py-12 px-4 md:px-8">
