@@ -30,14 +30,14 @@ const Hero = () => {
         </p>
         <div className="flex space-x-4">
           <Link to="/about">
-            <button className="bg-[#C9CBDC] text-[#13084B] px-6 py-3 rounded-full shadow hover:bg-opacity-80 transition duration-200">
-              Learn More
-            </button>
+          <button className="px-6 py-2 rounded-full border border-primary bg-primary text-white transition-all duration-300 hover:bg-transparent hover:text-primary">
+                Learn More
+          </button>
           </Link>
           <Link to="/contact">
-            <button className="bg-[#13084B] text-white px-6 py-3 rounded-full shadow hover:bg-opacity-80 transition duration-200">
-              Contact Us
-            </button>
+          <button className="px-6 py-2 rounded-full border border-primary text-primary transition-all duration-300 hover:bg-primary hover:text-white">
+                Contact Us
+          </button>
           </Link>
         </div>
       </div>
