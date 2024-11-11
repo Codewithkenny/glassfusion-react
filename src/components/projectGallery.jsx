@@ -6,11 +6,17 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import projectImage1 from '../assets/gallery/showerglass.jpg';
 import projectImage2 from '../assets/glassbalustrade.jpg';
 import projectImage3 from '../assets/gallery/partition.jpg';
-// Dummy project data (replace with actual data)
+import projectImage4 from '../assets/facade.jpg';
+import projectImage5 from '../assets/newglassbalustrade.jpg';
+
+
+// Project data 
 const projectData = [
   { id: 1, title: 'Project One', imageUrl: projectImage1 },
   { id: 2, title: 'Project Two', imageUrl: projectImage2 },
   { id: 3, title: 'Project Three', imageUrl: projectImage3 },
+  { id: 4, title: 'Project Four', imageUrl: projectImage4 },
+  { id: 5, title: 'Project Five', imageUrl: projectImage5 },
 ];
 
 const ProjectGallery = () => {
