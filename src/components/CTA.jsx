@@ -11,7 +11,7 @@ const CTASection = () => {
         {/* Column 1 - Get a Quote */}
         <div
           className="relative h-64 bg-cover bg-center flex flex-col items-center justify-end"
-          style={{ backgroundImage: `url(${bgImage1})` }}
+          style={{ backgroundImage: ` url(${bgImage1})` }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="relative text-center p-4 mb-4">

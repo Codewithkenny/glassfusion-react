@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import image1 from "../../assets/gallery/showerglass.jpg";
 import image2 from "../../assets/gallery/balustrade-thumbnail1.jpeg";
@@ -17,12 +17,50 @@ const projectsData = [
 ];
 
 const Project = () => {
+  const [visibleImages, setVisibleImages] = useState({});
+  const imageRefs = useRef({});
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleImages((prev) => ({
+              ...prev,
+              [entry.target.id]: true,
+            }));
+            // Safely unobserve the image only if the element exists
+            if (imageRefs.current[entry.target.id]) {
+              observer.unobserve(entry.target);
+            }
+          }
+        });
+      },
+      { threshold: 0.2 } // Trigger when 20% of the image is visible
+    );
+
+    Object.keys(imageRefs.current).forEach((key) => {
+      if (imageRefs.current[key]) {
+        observer.observe(imageRefs.current[key]);
+      }
+    });
+
+    // Cleanup observer on unmount
+    return () => {
+      Object.keys(imageRefs.current).forEach((key) => {
+        if (imageRefs.current[key]) {
+          observer.unobserve(imageRefs.current[key]);
+        }
+      });
+    };
+  }, []);
+
   return (
     <section className="py-16 bg-white">
       {/* Section Header */}
       <div className="text-center mb-12">
         <h2 className="text-5xl font-bold text-primary transition-transform duration-300 hover:scale-105">
-          Our Projects
+          OUR PROJECTS
         </h2>
         <p className="mt-4 text-gray-900">
           View our wide range of glass projects and glazing solutions here, or alternatively view by different glass types below.
@@ -39,9 +77,12 @@ const Project = () => {
             >
               <Link to={`/projects/${project.id}`}>
                 <img
-                  src={project.image}
+                  ref={(el) => (imageRefs.current[project.id] = el)}
+                  id={project.id}
+                  src={visibleImages[project.id] ? project.image : ""}
                   alt={project.name}
                   className="w-full h-64 object-cover transition-opacity duration-300 opacity-80 hover:opacity-100"
+                  loading="lazy" // Native lazy loading
                 />
                 {/* Diagonal Gradient Overlay */}
                 <div

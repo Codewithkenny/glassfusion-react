@@ -49,7 +49,7 @@ const ProjectGallery = () => {
           <h3 className="text-2xl text-white mb-8">
             {projectData[currentSlide].title}
           </h3>
-          <Link to={`/project/${projectData[currentSlide].id}`}>
+          <Link to={`/project-gallery/${projectData[currentSlide].id}`}>
             <button className="bg-gray-400 text-white px-6 py-3 rounded-full transition duration-300 hover:bg-transparent hover:text-white border border-white">
               VIEW PROJECT
             </button>

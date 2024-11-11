@@ -4,6 +4,7 @@ import Home from "../pages/home/Home";
 import About from "../pages/home/About"; 
 import Project from "../pages/home/Project";
 import ProjectDetails from '../pages/home/ProjectDetails';
+import ProjectGalleryDetails from "../components/ProjectGalleryDetails";
 import Gallery from '../components/sliderGallery'; 
 import ContactUs from "../components/ContactUs";
 import GlassType from "../pages/home/GlassType";
@@ -33,14 +34,10 @@ const router = createBrowserRouter([
         path: "/projects/:id",
         element: <ProjectDetails />,
       },
-      // {
-      //   path: "/glass-types/balustrades",
-      //   element: <GlassType type="balustrades" />,
-      // },
-      // {
-      //   path: "/glass-types/showers",
-      //   element: <GlassType type="showers" />,
-      // },
+      {
+        path: "/project-gallery/:id",
+        element: <ProjectGalleryDetails />,
+      },
       {
         path: "/glass-types/:type",
         element: <GlassType />
