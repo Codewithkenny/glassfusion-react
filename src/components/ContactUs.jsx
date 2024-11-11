@@ -9,14 +9,8 @@ const ContactUs = () => {
 
   return (
     <div>
-      {/* Hero Section */}
-      <div className="w-full bg-primary text-white py-16 px-4 text-center my-20">
-        <h1 className="text-4xl font-bold">Contact Us</h1>
-        <p className="mt-2">We'd love to hear from you! Reach out with any questions or inquiries.</p>
-      </div>
-
-     {/* Breadcrumb */}
-     <nav className="bg-gray-200 py-3 px-4 md:px-8">
+       {/* Breadcrumb */}
+        <nav className="bg-gray-200 py-3 px-4 md:px-8">
         <ul className="flex items-center text-sm text-gray-600 space-x-2">
           <li>
             <Link to="/" className="hover:text-blue-600">Home</Link>
@@ -25,12 +19,16 @@ const ContactUs = () => {
           <li className="font-semibold text-primary">Contact</li>
         </ul>
       </nav>
+      {/* Hero Section */}
+      <div className="w-full bg-primary text-white py-16 px-4 text-center my-20">
+        <h1 className="text-4xl font-bold">Contact Us</h1>
+        <p className="mt-2">We'd love to hear from you! Reach out with any questions or inquiries.</p>
+      </div>
+
+    
+   
 
 
-      {/* Breadcrumb and Contact Content */}
-      <div className="container mx-auto py-16 px-4 md:px-8 lg:px-12">
-        
-       
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
@@ -128,7 +126,7 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-      </div>
+      
     </div>
   );
 };

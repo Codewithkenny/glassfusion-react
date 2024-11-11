@@ -6,8 +6,8 @@ import bgImage3 from '../assets/facade.jpg';
 
 const CTASection = () => {
   return (
-    <div className="container mx-auto py-16">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section className="w-full bg-primary mt-10 py-16">
+      <div className="px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Column 1 - Get a Quote */}
         <div
           className="relative h-64 bg-cover bg-center flex flex-col items-center justify-end"
@@ -51,7 +51,7 @@ const CTASection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import showerGlassImage from '../../assets/gallery/showerglass.jpg'; 
 import Divider from "../../components/Divider"
+import CTA from "../../components/CTA";
 
 
 const About = () => {
@@ -67,7 +68,7 @@ const About = () => {
       <Divider/>
 
       {/* New Two-Column Section with Image and Text */}
-      <section className="py-12 px-4 md:px-8 bg-gray-100">
+      <section className="py-12 px-4 md:px-8 bg-gray-100 mt-10">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Left Column: Text Content */}
           <div>
@@ -89,6 +90,7 @@ const About = () => {
               />
             </div>
         </div>
+        <CTA />
       </section>
     </div>
   );

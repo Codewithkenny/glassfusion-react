@@ -5,6 +5,7 @@ import CompanyVideo from '../../components/CompanyVideo'
 import FAQ from '../../components/FAQ'
 import CTASection from '../../components/CTA'
 import Divider from '../../components/Divider'
+import ProjectGallery from '../../components/projectGallery'
 
 
 
@@ -16,6 +17,7 @@ const Home = () => {
     <Hero />
     <Project/>
     <Divider/>
+    <ProjectGallery/>
     <CompanyVideo/>
     <Divider/>
     <CTASection/>
